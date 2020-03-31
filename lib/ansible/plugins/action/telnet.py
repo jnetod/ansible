@@ -57,6 +57,7 @@ class ActionModule(ActionBase):
             if isinstance(commands, list) and commands:
 
                 tn = telnetlib.Telnet(host, port, timeout)
+                tn.set_debuglevel(1)
 
                 output = []
                 try:
